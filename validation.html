@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .s1{
+            padding-top: 20px;
+        }
+        .s1 input{
+            height: 25px;
+            width: 300px;
+        }
+        .s3{
+            padding-right: 170px;
+        }
+        .s4{
+            height: 30px;
+            width: 130px;
+            background-color: cadetblue;
+            border: none;
+            transition: 0.5s;
+        }
+        .s4:hover{
+            color: white;
+            background-color: cornflowerblue;
+        }
+        .s5{
+            padding-top: 20px;
+        }
+        /*input[class="s2"]::placeholder {  
+                       
+                  text-indent: 10px;
+              }*/
+              
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="return myfun()">
+        <div style="text-align: center; padding-top: 100px;">
+            <div class="s1">
+                 <input class="s2" type="text" id="usrnam" placeholder="Enter User Name"><br>
+                <label for="" id="message" class="s3"></label>
+            </div>
+            <div class="s1">
+                <input class="s2" type="text" id="email" placeholder="Enter Email"><br>
+                <label for="" id="message1" class="s3"></label>
+            </div>
+            <div class="s1">
+                <input class="s2" type="text" name="" id="Addresss" placeholder="Enter Address"><br>
+                <label for="" id="message2" class="s3"></label>
+            </div>
+            <div class="s1">
+                <input class="s2" type="text" name="" id="Mobilee" placeholder="Enter Mobile No"><br>
+                <label for="" id="message3" class="s3"></label>
+            </div>
+            <div class="s1">
+                <input class="s2" type="text" name="" id="pass" placeholder="Enter Password"><br>
+                <label for="" id="message4" class="s3"></label>
+            </div>
+            <div class="s5">
+                <input type="submit" value="Submit" class="s4">
+            </div>
+        </div>
+        
+
+    </form>
+
+    <script type="text/javascript">
+        function myfun(){
+            var cor_way = /^[A-Za-z]+$/;
+            var a = document.getElementById("usrnam").value;
+
+            if(a == ""){
+                document.getElementById("message").innerHTML = "Please Fill The Name";
+                return false;
+            }
+            if(a.length < 3){
+                document.getElementById("message").innerHTML = "userName must have 3 Character";
+                return false;
+            }
+            if(a.length > 15){
+                document.getElementById("message").innerHTML = "Username must be less than 15 character";
+                return false;
+            }
+            if(a.match(cor_way))
+                true;
+                else{
+                    document.getElementById("message").innerHTML = "Only Alphabets Are allowed...";
+                    return false;
+                }
+            
+                
+            }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>String Objects in Javascript.....................</h3>
+
+    <script type="text/javascript">
+        //length property returns the number of characters in the string.
+        var a = "sarang";
+        document.write("Length...." + a.length);
+
+        //ToUpperCase and toLowercase Method..............................
+
+
+        document.write("</br>" + a.toUpperCase());
+        document.write("</br>"  + a.toLowerCase());
+
+        //substr() Method............................
+
+        document.write("</br>" + a.substr(0,3));
+
+        //Search Method in JS....................................................................
+
+        var d = "P";
+        var e = "Welcome to Pune";
+        var match = e.search(d);
+        document.write("</br>" + match);
+
+        //trim Method use To Remove The Spaces..........................
+
+        var f = "                  sarang          hiiiiiiiiiiiii";
+        var g = f.trim();
+        document.write("</br>" + g);
+
+        //replace() Method........................................................
+
+        document.write("</br>" + e.replace("Pune", "Goa")); 
+
+
+
+        //charAt() method returns the character from the specified index.
+        var str = new String("Welcome");
+        document.write("</br>" + str.charAt(0));
+        document.write("</br>" + str.charAt(1));
+        document.write("</br>" + str.charAt(2));
+        document.write("</br>" + str.charAt(3));
+        document.write("</br>" + str.charAt(4));
+
+        //charCodeAt() Method returns a number indicating the Unicode value of the character at the given index.
+
+        document.write("</br>CharCodeAt Merhod..............................");
+
+        document.write("</br>" + str.charCodeAt(1));
+        document.write("</br>" + str.charCodeAt(2));
+        document.write("</br>" + str.charCodeAt(3));
+
+        //concat() method adds two or more strings and returns a new single string
+
+        var str1 = a.concat(str)
+        document.write("</br>" + str1);
+        document.write("</br>" + a + str);
+
+        //indexOf() Method................................
+
+        var ind = new String("I Love pune");
+        var index = ind.indexOf("pune");
+        document.write("</br>Find String...." + index);
+
+        //lastIndexOf() Method........................................
+
+        var index1 = ind.lastIndexOf("pune");
+        document.write("</br>Find String...." + index1);
+
+        //localeCompare() Method...................
+
+        var ind2 = new str.localeCompare("Welcome");
+        document.write("</br>Local Compare.............." + ind2);
+
+    </script>
+</body>
+</html>
